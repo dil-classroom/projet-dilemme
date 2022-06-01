@@ -3,7 +3,7 @@
 
 ## Description
 TODO
-
+<br><br>
 ---
 ## User manual
 ### Quick start example
@@ -12,10 +12,11 @@ TODO
 java -jar dilemme.jar init myAmazingWebsite
 ```
 The command will generate a basic site structure: <br>
-`myAmazingWebsite` : website folder (created in the current directory)<br> 
-`├── config.json` : Global website config file ([more info](#config-file))<br>
-`└── index.md` : Site page ([more info](#site-pages))<br> 
-
+```
+myAmazingWebsite  => website folder (created in the current directory) 
+├── config.json   => Global website config file ([more info](#config-file))
+└── index.md      => Site page ([more info](#site-pages)) 
+```
 #### 2. Create a page
 Add content to the `index.md` file (in [Markdown](https://www.markdownguide.org/cheat-sheet/)):
 ```
@@ -35,12 +36,13 @@ Now the page is created we can build the website with the following command:
 java -jar dilemme.jar build myAmazingWebsite
 ```
 The built site will be generated inside the build folder:<br>
-`myAmazingWebsite`<br>
-`├── build`<br>
-`│`&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`└── index.html` : html page generated<br>
-`├── config.json`<br>
-`└── index.md`<br>
-
+```
+myAmazingWebsite
+├── build
+│     └── index.html   => html page generated
+├── config.json
+└── index.md
+```
 #### 4. Serve the website
 After the website is built we can serve it (on a local http server) with the following command:
 ```
@@ -49,7 +51,7 @@ java -jar dilemme.jar serve myAmazingWebsite
 
 #### 5. Enjoy
 The site is now ready to be visited on your browser on the following address: [http://localhost:8080/](http://localhost:8080/)
-
+<br><br>
 ### Commands
 | Command    | Function                                                     | Requirements        |
 |------------|--------------------------------------------------------------|---------------------|
@@ -58,19 +60,19 @@ The site is now ready to be visited on your browser on the following address: [h
 | `clear`    | Delete the `build` folder                                    | built website       |
 | `serve`    | Serve the built site on a local http server                  | built website       |
 | `-version` | Display the version of the dilemme tool                      | None                |
-
+<br><br>
 ### Config file
 The config file is a json file that contains all the configuration of the website.
 It contains the following fields:
 - `title` : the title of the website
 - `owner` : the name of the owner of the website
 - `domain` : the domain of the website
-
+<br><br>
 ### Site pages
 Each site page (with a `.md` extention) is a site page. <br>
-When you run the [init command](#init) `index.md` will be generated, you also can use it as a template to create other site page. <br>
+When you run the [init command](#Commands) `index.md` will be generated, you also can use it as a template to create other site page. <br>
 The file is in two parts:
-1. The page configuration, where you can configure mutiple things:
+1. The page configuration, where you can configure multiple things:
     - `title`: the page title that will be displayed on the top of the page
     - `author`: the author of website
     - `date`: the date of the page creation (in the format yyyy-MM-dd)
